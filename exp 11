@@ -1,0 +1,5 @@
+import cv2
+i = cv2.imread(r"C:\Users\s.rajeswarireddy\Downloads\PIC.jpg")
+cv2.imshow('180', cv2.rotate(i, cv2.ROTATE_180))
+cv2.waitKey(0)
+
