@@ -1,0 +1,4 @@
+import cv2
+i = cv2.imread(r"C:\Users\s.rajeswarireddy\Pictures\Ganesha.jpg")
+cv2.imshow('270', cv2.rotate(i, cv2.ROTATE_90_COUNTERCLOCKWISE))
+cv2.waitKey(0)
