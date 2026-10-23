@@ -1,0 +1,9 @@
+import cv2
+import numpy as np
+i = cv2.imread(r"C:\Users\s.rajeswarireddy\Downloads\desert.jpg")
+p1 = np.float32([[50,50],[200,50],[50,200],[200,200]])
+p2 = np.float32([[0,0],[200,0],[0,200],[200,200]])
+m = cv2.getPerspectiveTransform(p1,p2)
+cv2.imshow('Perspective', cv2.warpPerspective(i,m,(300,300)))
+cv2.waitKey(0)
+
