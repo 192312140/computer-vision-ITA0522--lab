@@ -1,0 +1,6 @@
+import cv2
+import numpy as np
+i = cv2.imread(r"C:\Users\s.rajeswarireddy\Downloads\moon pic.jpg", 0)
+r = cv2.erode(i, np.ones((3,3), np.uint8))
+cv2.imshow('Erosion', r)
+cv2.waitKey(0)
