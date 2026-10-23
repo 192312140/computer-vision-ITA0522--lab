@@ -1,0 +1,7 @@
+import cv2
+i = cv2.imread(r"C:\Users\s.rajeswarireddy\Downloads\flower")
+g = cv2.cvtColor(i, cv2.COLOR_BGR2GRAY)
+c = cv2.cornerHarris(g, 2, 3, 0.04)
+i[c > 0.01*c.max()] = [0,0,255]
+cv2.imshow('Corners', i)
+cv2.waitKey(0)
