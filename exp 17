@@ -1,0 +1,8 @@
+import cv2
+i = cv2.imread(r"C:\Users\s.rajeswarireddy\Downloads\moon pic.jpg")
+w = i.copy()
+cv2.putText(w, 'WATERMARK', (20,50),
+            cv2.FONT_HERSHEY_SIMPLEX, 1, (0,0,255), 2)
+cv2.imshow('Watermarked Image', w)
+cv2.waitKey(0)
+
