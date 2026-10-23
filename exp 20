@@ -1,0 +1,6 @@
+import cv2
+import numpy as np
+i = cv2.imread(r"C:\Users\s.rajeswarireddy\Downloads\PIC.jpg", 0)
+r = cv2.dilate(i, np.ones((3,3), np.uint8))
+cv2.imshow('Dilation', r)
+cv2.waitKey(0)
