@@ -1,0 +1,9 @@
+import cv2
+import numpy as np
+i = cv2.imread(r"C:\Users\s.rajeswarireddy\Downloads\peng.jpg")
+p1 = np.float32([[0,0],[200,0],[0,200]])
+p2 = np.float32([[50,50],[200,50],[50,200]])
+m = cv2.getAffineTransform(p1,p2)
+cv2.imshow('Affine', cv2.warpAffine(i,m,(i.shape[1],i.shape[0])))
+cv2.waitKey(0)
+
