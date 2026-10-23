@@ -1,0 +1,9 @@
+import cv2
+
+i = cv2.resize(cv2.imread(r"C:\Users\s.rajeswarireddy\Downloads\PIC.jpg"), (400, 400))
+roi = i[50:150, 50:150].copy()
+i[200:300, 200:300] = roi
+
+cv2.imshow('ROI', i)
+cv2.waitKey(0)
+cv2.destroyAllWindows()
